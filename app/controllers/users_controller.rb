@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   # GET /users
   def index
     @users = User.all
 
-    render json: @users
+    render json: @users, include: ['events_attending.comments', 'events_created.comments', 'events_attending.comments.user', 'events_created.comments.user']
   end
 
   # GET /users/1
@@ -45,7 +46,13 @@ class UsersController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
+
+    # original entry
+    # def user_params
+    #   params.require(:user).permit(:name, :username, :email, :about, :image)
+    # end
+
     def user_params
-      params.require(:user).permit(:name, :username, :email, :about, :image)
+    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :about, :image, events_attending_ids:[])
     end
 end
