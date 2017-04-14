@@ -46,6 +46,6 @@ class GenresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def genre_params
-      params.require(:genre).permit(:genre)
+      params.require(:genre).permit(:genre, :product_id)
     end
 end

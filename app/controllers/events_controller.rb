@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
 
   # GET /events
   def index
@@ -46,6 +48,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id)
+      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id, attendee_ids:[])
     end
 end

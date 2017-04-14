@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!
 
   # GET /comments
   def index
@@ -46,6 +47,6 @@ class CommentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def comment_params
-      params.require(:comment).permit(:user_id, :event_id)
+      params.require(:comment).permit(:body, :user_id, :event_id)
     end
 end

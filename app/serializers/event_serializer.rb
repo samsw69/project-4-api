@@ -1,4 +1,8 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :title, :location, :date, :description, :image
-  has_one :user
+  has_many :attendees
+  belongs_to :user
+  has_many :comments
+
+  attributes :id, :title, :location, :date, :description, :image, :attendee_ids
+
 end
