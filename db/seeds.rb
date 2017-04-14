@@ -22,13 +22,20 @@ image: "https://shechive.files.wordpress.com/2011/03/beautiful-art-8.jpg",
 password: "password",
 password_confirmation: "password")
 
+maureen = User.create!(name: "Maureen James",
+username: "Moj",
+email: "moj@ga.co",
+about: "looking for some good homemade art",
+image: "https://shechive.files.wordpress.com/2011/03/beautiful-art-8.jpg",
+password: "password",
+password_confirmation: "password")
 
 e1 = Event.create!(title: "photography link-up",
 location: "FH community centre",
 date: Date.new(2017, 4, 28),
 description: "We will be heading to the Sedgemoor fields to work on some landscape photography.",
 image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",
-user: sam, attendees: [eden])
+user: sam, attendees: [eden, sam])
 
 e2 = Event.create!(title: "mixed media art in the afternoon",
 location: "artists home",
@@ -40,14 +47,14 @@ user: eden)
 Comment.create!(body: "testing testing again in events ...", user: sam, event: e2)
 Comment.create!(body: "testing testing again in events - number 2 ...", user: eden, event: e1)
 
-skull = Product.create!(title: "Skullduggery",
+Product.create!(title: "Skullduggery",
 description: "Embellished with beads and costume jewellery and comes framed in a 60x60cm box frame.",
 price: 89.99,
 image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",
 user: sam,
 )
 
-geisha = Product.create!(title: "Geisha Girl",
+Product.create!(title: "Geisha Girl",
 description: "abstract collage of a geisha, in paper, paint and sand.",
 price: 89.99,
 image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",

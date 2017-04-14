@@ -4,5 +4,5 @@ class Product < ApplicationRecord
 
   validates :title, presence: true
   validates :price, presence: true
-  validates :description, allow_blank: false
+  validates :description, length: { minimum: 1, maximum: 142 }
 end
