@@ -50,13 +50,13 @@ Comment.create!(body: "testing testing again in events - number 2 ...", user: ed
 Product.create!(title: "Skullduggery",
 description: "Embellished with beads and costume jewellery and comes framed in a 60x60cm box frame.",
 price: 89.99,
-image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",
+image: "https://s-media-cache-ak0.pinimg.com/originals/a0/86/6f/a0866fb1d8e7a72743200cfc9fc2fd28.jpg",
 user: sam,
 )
 
 Product.create!(title: "Geisha Girl",
 description: "abstract collage of a geisha, in paper, paint and sand.",
-price: 89.99,
-image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",
+price: 109.99,
+image: "https://s-media-cache-ak0.pinimg.com/originals/47/11/5b/47115b586d3a63efb427903ae1387a95.jpg",
 user: sam,
 )
