@@ -35,7 +35,7 @@ location: "FH community centre",
 date: Date.new(2017, 4, 28),
 description: "We will be heading to the Sedgemoor fields to work on some landscape photography.",
 image: "https://s-media-cache-ak0.pinimg.com/originals/e2/30/02/e23002cf95ed1204e8e2c301d661cc96.jpg",
-user: sam, attendees: [eden, sam])
+user: sam, attendees: [sam])
 
 e2 = Event.create!(title: "mixed media art in the afternoon",
 location: "artists home",

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    @user = User.new(Uploader.upload(user_params))
 
     if @user.save
       render json: @user, status: :created, location: @user
@@ -53,6 +53,6 @@ class UsersController < ApplicationController
     # end
 
     def user_params
-    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :about, :image, events_attending_ids:[])
+    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :about, :image, :base64, events_attending_ids:[])
     end
 end

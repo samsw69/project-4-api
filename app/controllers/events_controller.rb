@@ -15,9 +15,12 @@ class EventsController < ApplicationController
     render json: @event
   end
 
-  # POST /events
+
+# POST /events
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(Uploader.upload(event_params))
+    # reinstate next line - if doesnt resolve problem
+    @event.user = current_user
 
     if @event.save
       render json: @event, status: :created, location: @event
@@ -26,17 +29,31 @@ class EventsController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /events/1
   def update
-    if @event.update(event_params)
+
+    if @event.update(Uploader.upload(event_params))
       render json: @event
     else
       render json: @event.errors, status: :unprocessable_entity
     end
   end
 
+  #   return render json: { errors: ["Unauthorised"] } if @event.user !=current_user
+  #
+  #   if
+  #     @event = Event.update(Uploader.upload(event_params))
+  #     # @event.update(event_params)
+  #     render json: @event
+  #   else
+  #     render json: @event.errors, status: :unprocessable_entity
+  #   end
+  # end
+
   # DELETE /events/1
   def destroy
+    return render json: { errors: ["Unauthorised"] } if @event.user !=current_user
     @event.destroy
   end
 
@@ -48,6 +65,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id, attendee_ids:[])
+      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id, :base64, attendee_ids:[])
     end
 end
