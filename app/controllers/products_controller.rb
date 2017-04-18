@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   # POST /products
   def create
     @product = Product.new(Uploader.upload(product_params))
+    @event.user = current_user
 
     if @product.save
       render json: @product, status: :created, location: @product
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1
   def update
-    if @product.update(product_params)
+    if @product.update(Uploader.upload(product_params))
       render json: @product
     else
       render json: @product.errors, status: :unprocessable_entity
@@ -36,6 +37,7 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   def destroy
+    return render json: { errors: ["Unauthorised"] } if @product.user !=current_user
     @product.destroy
   end
 

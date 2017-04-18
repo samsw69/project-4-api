@@ -1,12 +1,11 @@
 class ProductSerializer < ActiveModel::Serializer
   belongs_to :user
-  attributes :id, :title, :description, :price, :image
+  attributes :id, :title, :description, :price, :image_src
+  # removed :image_src from attributes
+
   has_one :user
-end
 
   def image_src
     object.image.url
   end
-
-
-# add  ,:image_src   back into attributes for image upload
+end
