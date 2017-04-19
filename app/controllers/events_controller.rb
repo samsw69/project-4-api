@@ -19,7 +19,6 @@ class EventsController < ApplicationController
 # POST /events
   def create
     @event = Event.new(Uploader.upload(event_params))
-    # reinstate next line - if doesnt resolve problem
     @event.user = current_user
 
     if @event.save

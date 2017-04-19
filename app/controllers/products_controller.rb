@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   # POST /products
   def create
     @product = Product.new(Uploader.upload(product_params))
-    @event.user = current_user
+    @product.user = current_user
 
     if @product.save
       render json: @product, status: :created, location: @product
