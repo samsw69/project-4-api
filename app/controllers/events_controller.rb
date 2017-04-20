@@ -39,16 +39,6 @@ class EventsController < ApplicationController
     end
   end
 
-  #   return render json: { errors: ["Unauthorised"] } if @event.user !=current_user
-  #
-  #   if
-  #     @event = Event.update(Uploader.upload(event_params))
-  #     # @event.update(event_params)
-  #     render json: @event
-  #   else
-  #     render json: @event.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /events/1
   def destroy
@@ -64,6 +54,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id, :base64, attendee_ids:[])
+      params.require(:event).permit(:title, :location, :date, :description, :image, :user_id, :genre_id, :base64, attendee_ids:[])
     end
 end

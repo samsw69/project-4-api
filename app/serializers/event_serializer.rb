@@ -2,8 +2,9 @@ class EventSerializer < ActiveModel::Serializer
   has_many :attendees
   belongs_to :user
   has_many :comments
+  has_one :genre
 
-  attributes :id, :title, :location, :date, :description, :attendee_ids, :image_src
+  attributes :id, :title, :location, :date, :description, :attendee_ids, :image_src, :genre
 # removed :image from attributes
 
     def image_src

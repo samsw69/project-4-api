@@ -24,8 +24,11 @@ profile = HTTParty.get('https://api.github.com/user', {
    if user.save
      token = Auth.issue({ id: user.id })
      render json: { user: UserSerializer.new(user), token: token }, status: :ok
+
+
    else
      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+
    end
   end
 end
