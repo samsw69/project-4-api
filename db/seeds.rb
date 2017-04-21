@@ -101,35 +101,35 @@ Comment.create!(body: "Jake, it ended in tears last year.  Are you sure you can 
 
 Product.create!(title: "Skullduggery",
 description: "Embellished with beads and costume jewellery and comes framed in a 60x60cm box frame.",
-genre_id: [2],
+genre_ids: [2],
 price: 89.99,
 image: File.open(File.join(Rails.root, "db/images/skull.jpg")),
 user: eden,
 )
 Product.create!(title: "Armchair bouquets",
 description: "Stunning armchair protectors - hand stitched.",
-genre_id: [1],
+genre_ids: [1],
 price: 9.99,
 image: File.open(File.join(Rails.root, "db/images/armchair_cross_stitch.jpg")),
 user: alice
 )
 Product.create!(title: "Rib cage Doillie",
 description: "handmade doillies with a beautiful ribcage design.",
-genre_id: [1],
+genre_ids: [1],
 price: 9.99,
 image: File.open(File.join(Rails.root, "db/images/armchair_doillie.jpg")),
 user: alice
 )
 Product.create!(title: "Awkward balloon",
 description: "personal stories told through cross stitch - a boy and his balloon #awkward.",
-genre_id: [1],
+genre_ids: [1],
 price: 2.99,
 image: File.open(File.join(Rails.root, "db/images/awkward_balloon.jpg")),
 user: alice
 )
 Product.create!(title: "Geisha Girl",
 description: "abstract collage of a geisha, in paper, paint and sand.",
-genre_id: [8],
+genre_ids: [8],
 price: 109.99,
 image: File.open(File.join(Rails.root, "db/images/Geisha.jpg")),
 user: sam
@@ -137,7 +137,7 @@ user: sam
 
 Product.create!(title: "Bead art",
 description: "A vibrant colourful picture which includes a variety of coloured beads.",
-genre_id: [9],
+genre_ids: [9],
 price: 15.50,
 image: File.open(File.join(Rails.root, "db/images/bead_art.jpg")),
 user: maureen
@@ -145,7 +145,7 @@ user: maureen
 
 Product.create!(title: "a gift from Jake...",
 description: "edgy gift for a loved one - probably a female friend!",
-genre_id: [1],
+genre_ids: [1],
 price: 19.99,
 image: File.open(File.join(Rails.root, "db/images/cross_stitch.jpg")),
 user: jake
@@ -153,7 +153,7 @@ user: jake
 
 Product.create!(title: "golden pineapple",
 description: "stunning disco-inspired pineapple.",
-genre_id: [4],
+genre_ids: [4],
 price: 399.99,
 image: File.open(File.join(Rails.root, "db/images/pineapple.jpg")),
 user: ajay
@@ -161,7 +161,7 @@ user: ajay
 
 Product.create!(title: "Coloured pencil peacock",
 description: "274x184cm piece of art which does not include a frame.",
-genre_id: [8],
+genre_ids: [8],
 price: 7.00,
 image: File.open(File.join(Rails.root, "db/images/peacock.jpg")),
 user: sam
@@ -169,7 +169,7 @@ user: sam
 
 Product.create!(title: "Embroidery stool",
 description: "Extravagant piece of art that can be put to use everyday, varnished oak legs.",
-genre_id: [2, 6],
+genre_ids: [2, 6],
 price: 35.00,
 image: File.open(File.join(Rails.root, "db/images/embroidery_stool.jpg")),
 user: ajay
@@ -177,7 +177,7 @@ user: ajay
 
 Product.create!(title: "Floral letter P",
 description: "vintage look on a letter of your choose, bold colours with the dimensions being 193x261cm.",
-genre_id: [7],
+genre_ids: [7],
 price: 24.99,
 image: File.open(File.join(Rails.root, "db/images/floral_letter.jpg")),
 user: maureen
@@ -185,15 +185,15 @@ user: maureen
 
 Product.create!(title: "Newspaper girl",
 description: "Subtle collage of a girl with a illuminating crown.",
-genre_id: [8],
+genre_ids: [8],
 price: 20.00,
 image: File.open(File.join(Rails.root, "db/images/newspaper_girl.jpg")),
-user: eden
+user: buki
 )
 
 Product.create!(title: "Oil painting",
 description: "A gorgeous picture that captures the bright light from the sunset using oil colours to create it.",
-genre_id: [5],
+genre_ids: [5],
 price: 12.89,
 image: File.open(File.join(Rails.root, "db/images/water_lily.jpg")),
 user: maureen
@@ -201,7 +201,7 @@ user: maureen
 
 Product.create!(title: "The Raven",
 description: "A picture that uses collage to create an image of a Raven.",
-genre_id: [8],
+genre_ids: [8],
 price: 9.99,
 image: File.open(File.join(Rails.root, "db/images/raven.jpg")),
 user: sam
