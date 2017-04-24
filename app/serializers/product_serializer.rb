@@ -1,7 +1,6 @@
 class ProductSerializer < ActiveModel::Serializer
   belongs_to :user
   attributes :id, :title, :description, :genre_ids, :price, :image_src
-  # removed :image_src from attributes
 
   has_one :user
 

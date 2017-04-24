@@ -113,19 +113,40 @@ price: 89.99,
 image: File.open(File.join(Rails.root, "db/images/aztec_skull.jpg")),
 user: eden,
 )
-Product.create!(title: "Armchair bouquets",
+Product.create!(title: "Girl with Tea",
+description: "abstract collage of an oriental lady drinking from a red tea cup.",
+genre_ids: [8],
+price: 109.99,
+image: File.open(File.join(Rails.root, "db/images/j_tea.jpg")),
+user: sam
+)
+Product.create!(title: "Girl with Tea II",
+description: "abstract collage of an oriental lady drinking from a red & white tea cup.",
+genre_ids: [8],
+price: 109.99,
+image: File.open(File.join(Rails.root, "db/images/tea.jpg")),
+user: sam
+)
+Product.create!(title: "Bead art",
+description: "A vibrant colourful picture which includes a variety of coloured beads.",
+genre_ids: [9],
+price: 15.50,
+image: File.open(File.join(Rails.root, "db/images/bead_art.jpg")),
+user: maureen
+)
+Product.create!(title: "ice cream cross stitch",
 description: "Stunning armchair protectors - hand stitched.",
 genre_ids: [1],
 price: 9.99,
-image: File.open(File.join(Rails.root, "db/images/armchair_cross_stitch.jpg")),
+image: File.open(File.join(Rails.root, "db/images/ice_cream.jpg")),
 user: alice
 )
-Product.create!(title: "Rib cage Doillie",
-description: "handmade doillies with a beautiful ribcage design.",
+Product.create!(title: "Bacteria x 4",
+description: "handmade cross stitch made by a real micro-biologist.",
 genre_ids: [1],
 price: 9.99,
-image: File.open(File.join(Rails.root, "db/images/armchair_doillie.jpg")),
-user: alice
+image: File.open(File.join(Rails.root, "db/images/bacterial_cross_stitch.jpg")),
+user: jake
 )
 Product.create!(title: "GSP Pillow",
 description: "handmade cushions for German Shorthaired Pointer fans!",
@@ -148,32 +169,11 @@ price: 109.99,
 image: File.open(File.join(Rails.root, "db/images/Geisha.jpg")),
 user: sam
 )
-Product.create!(title: "Girl with Tea",
-description: "abstract collage of an oriental lady drinking from a red tea cup.",
-genre_ids: [8],
-price: 109.99,
-image: File.open(File.join(Rails.root, "db/images/j_tea.jpg")),
-user: sam
-)
-Product.create!(title: "Girl with Tea II",
-description: "abstract collage of an oriental lady drinking from a red & white tea cup.",
-genre_ids: [8],
-price: 109.99,
-image: File.open(File.join(Rails.root, "db/images/tea.jpg")),
-user: sam
-)
-Product.create!(title: "Bead art",
-description: "A vibrant colourful picture which includes a variety of coloured beads.",
-genre_ids: [9],
-price: 15.50,
-image: File.open(File.join(Rails.root, "db/images/bead_art.jpg")),
-user: maureen
-)
-Product.create!(title: "a gift from Jake...",
-description: "edgy gift for a loved one - probably a female friend!",
+Product.create!(title: "cat pew...",
+description: "edgy gift for a loved one - gun toting cat!",
 genre_ids: [1],
 price: 19.99,
-image: File.open(File.join(Rails.root, "db/images/cross_stitch.jpg")),
+image: File.open(File.join(Rails.root, "db/images/cat_pew.jpg")),
 user: jake
 )
 Product.create!(title: "golden pineapple",

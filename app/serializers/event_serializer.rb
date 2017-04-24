@@ -5,7 +5,6 @@ class EventSerializer < ActiveModel::Serializer
   has_one :genre
 
   attributes :id, :title, :location, :date, :description, :attendee_ids, :image_src, :genre
-# removed :image from attributes
 
     def image_src
       object.image.url
