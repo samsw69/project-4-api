@@ -6,7 +6,7 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id, :name, :username, :email, :about, :image_src
 
   def image_src
-  object.image.url
+    object.image.url
   end
 
 end
