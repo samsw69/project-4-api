@@ -8,8 +8,8 @@ class Uploader
     end
   end
 
-  def self.upload(params)
 
+  def self.upload(params)
     image_data = split_base64(params[:base64])
 
     if image_data
@@ -29,8 +29,8 @@ class Uploader
 
       uploaded_file = ActionDispatch::Http::UploadedFile.new(img_params)
       params[:image] = uploaded_file
-      params.delete(:base64)
     end
+    params.delete(:base64)
     return params
   end
 

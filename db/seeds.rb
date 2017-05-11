@@ -134,18 +134,18 @@ price: 15.50,
 image: File.open(File.join(Rails.root, "db/images/bead_art.jpg")),
 user: maureen
 )
-Product.create!(title: "ice cream cross stitch",
-description: "Stunning armchair protectors - hand stitched.",
+Product.create!(title: "Heart cusion in cross stitch",
+description: "Beautiful pillow - grey with red heart 40x40cm - hand stitched.",
 genre_ids: [1],
 price: 9.99,
-image: File.open(File.join(Rails.root, "db/images/ice_cream.jpg")),
+image: File.open(File.join(Rails.root, "db/images/cushio_heart.jpg")),
 user: alice
 )
-Product.create!(title: "Bacteria x 4",
-description: "handmade cross stitch made by a real micro-biologist.",
+Product.create!(title: "cross stitch colourful cushion",
+description: "handmade cross stitch made with love!",
 genre_ids: [1],
-price: 9.99,
-image: File.open(File.join(Rails.root, "db/images/bacterial_cross_stitch.jpg")),
+price: 19.99,
+image: File.open(File.join(Rails.root, "db/images/cushion_cross_stitch.jpg")),
 user: jake
 )
 Product.create!(title: "GSP Pillow",
