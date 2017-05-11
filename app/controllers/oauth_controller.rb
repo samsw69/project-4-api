@@ -6,8 +6,7 @@ class OauthController < ApplicationController
       query: {
       client_id: ENV["GITHUB_CLIENT_ID"],
       client_secret: ENV["GITHUB_CLIENT_SECRET"],
-      # redirect_uri: 'http://localhost:7000/',
-
+      redirect_uri: "https://gentle-reaches-22555.herokuapp.com/",
       code: params[:code]
     },
     headers: { 'Accept' => 'application/json' }
