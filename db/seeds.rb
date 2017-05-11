@@ -134,7 +134,7 @@ price: 15.50,
 image: File.open(File.join(Rails.root, "db/images/bead_art.jpg")),
 user: maureen
 )
-Product.create!(title: "Heart cusion in cross stitch",
+Product.create!(title: "Heart cushion in cross stitch",
 description: "Beautiful pillow - grey with red heart 40x40cm - hand stitched.",
 genre_ids: [1],
 price: 9.99,
